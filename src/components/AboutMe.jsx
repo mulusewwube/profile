@@ -7,7 +7,7 @@ function AboutMe() {
   const timelineItems = [
     {
       year: "2024",
-      description: "Earned a Bachelor’s degree in Computer Science",
+      description: "I hold a Bachelor's degree in Computer Science.",
     },
     {
       year: "2023",
