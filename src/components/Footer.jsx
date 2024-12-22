@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="footer">
       <p>
-        &copy; {new Date().getFullYear()} Mulusew | Designed with 💙 by{" "}
+        &copy; {new Date().getFullYear()} Mulusew | Designed 💙 by{" "}
         <a href="https://github.com" target="_blank" rel="noopener noreferrer">
           Mulusew Wube
         </a>
