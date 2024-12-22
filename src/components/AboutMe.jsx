@@ -39,8 +39,8 @@ function AboutMe() {
 
       <div className="about-me-container">                                                                                             
         {/* Name Section */}
-        <div className="name-section" style={{ position: "relative", textAlign: "center", padding: "2rem", borderRadius: "15px",  background: " #2c2a6e", boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)", color: "#fff",  height:"250px" ,width:"400px" }}>
-  <h3 className="name-title" style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "1rem", textShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", transform: "translateY(-20px)", animation: "bounce 2s infinite" }}>
+        <div className="name-section" style={{ position: "relative", textAlign: "center", padding: "2rem", borderRadius: "15px",  background: " #", boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)", color: "#fff",  height:"250px" ,width:"400px" }}>
+  <h3 className="name-title" style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "1rem", textShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", transform: "translateY(-20px)", color: "#2c2a6e", animation: "bounce 2s infinite" }}>
     Mulusew Wube
   </h3>
   <ul className="description-list" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", justifyContent: "center", gap: "1.5rem" }}>
