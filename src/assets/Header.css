@@ -1,0 +1,113 @@
+/* Header.css */
+
+.portfolio-header {
+  background-color: #2C2A6E; /* Dark Blue Gray */
+  color: #f8f8f2; /* Light Cream */
+  padding: 10px 20px;
+  font-weight: bold;
+  position: sticky; /* Makes the header stick */
+  top: 0; /* Sticks at the top of the viewport */
+  z-index: 1000; /* Ensures it stays above other elements */
+}
+
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Ensures positioning of the navigation dropdown */
+}
+
+.logo h1 a {
+  color: #f8f8f2; /* Light Cream */
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.navigation ul li {
+  margin-left: 20px;
+}
+
+.navigation ul li a {
+  color: #cdd6f4; /* Soft Light Blue */
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s;
+  font-weight:bold;
+}
+
+.navigation ul li a:hover {
+  color: #ff6a00; /* Vibrant Sky Blue */
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #f8f8f2; /* Light Cream */
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    z-index: 10;
+  }
+
+  .navigation {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #2C2A6E; /* Slightly Lighter Dark Gray */
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 150px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .navigation.open {
+    display: flex;
+    z-index: 5;
+  }
+
+  .navigation ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navigation ul li {
+    margin: 0;
+  }
+
+  .navigation ul li a {
+    font-size: 18px;
+    padding: 5px 10px;
+    text-align: center;
+    color: #cdd6f4; /* Soft Light Blue */
+    display: block;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .navigation ul li a:hover {
+    background-color: #45475a; /* Darker Gray Hover */
+    color: #ff6a00 ; /* Vibrant Sky Blue */
+  }
+}

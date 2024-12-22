@@ -1,0 +1,42 @@
+.project-detail {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .project-detail-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .project-detail-description {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.6;
+  }
+  
+  .project-images img {
+    max-width: 100%;
+    height: auto;
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+  
+  .project-links {
+    margin-top: 20px;
+  }
+  
+  .project-detail-link {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .project-detail-link:hover {
+    background-color: #0056b3;
+  }
+  

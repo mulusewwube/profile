@@ -1,0 +1,201 @@
+/* General Contact Section Styling */
+.contact {
+  background: linear-gradient(135deg, #ffffff, #e0f7fa);
+  padding: 50px 0;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  margin-bottom: 40px;
+  height: 100%;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center; /* Center align the container */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.solve-problem {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f7f7f7; /* Light background for contrast */
+  border-radius: 10px;
+}
+
+.solve-problem .h {
+  font-size: 1rem;
+  color: #2c2a6e;
+  margin-bottom: 15px;
+}
+
+/* Left Section */
+.contact-left {
+  flex: 1;
+  text-align: center; /* Center text in the left section */
+  margin: 20px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 500px; /* Adjust width */
+  height: auto;
+  background-color:#2c2a6e;
+  padding: 30px; /* Add padding for spacing */
+  border-radius: 10px;
+}
+
+.contact-left.magic-hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.6);
+}
+
+.contact-info{
+  margin-top: 10px;
+}
+.email-button{
+  padding-left: 10px;
+}
+
+.contact-image {
+  width: 250px; /* Slightly larger image */
+  height: 350px;
+  border: 5px solid #fff;
+  object-fit: cover;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.contact-image:hover {
+  transform: scale(1.1);
+}
+
+.phone-button,
+.email-button {
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.phone-button .icon,
+.email-button .icon {
+  color: #ff9900;
+  font-size: 18px;
+}
+
+.phone-button:hover,
+.email-button:hover {
+  background: linear-gradient(135deg, #ff9900, #ffcc00);
+  transform: translateY(-5px);
+}
+
+/* Right Section */
+.contact-right {
+  flex: 2;
+  margin: 20px;
+}
+
+.contact-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-align: center; /* Center align the title */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  animation: slideInFromLeft 1.5s ease-out;
+  color: #ff9900;
+}
+
+.horizontal-line {
+  display: block;
+  margin: 0 auto 20px; /* Center the line */
+  width: 15%;
+  height: 5px;
+  background-color: #2c2a6e;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align form fields to the left */
+  gap: 15px;
+  text-align: left;
+}
+
+.form-group {
+  width: 100%;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+label .icon {
+  margin-right: 8px;
+  color: #ff9900;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #333;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.submit-btn {
+  padding: 12px 20px;
+  font-size: 18px;
+  border: none;
+  width: 100%; /* Full width for submit button */
+  cursor: pointer;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  color: #000000;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(135deg, #ff9900, #ffcc00);
+}
+
+.animated-icon {
+  margin-left: 8px;
+  animation: moveIcon 2s infinite ease-in-out;
+}
