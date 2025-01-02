@@ -30,6 +30,14 @@ function Projects() {
       link: "#",
       
     },
+
+            {
+      title: "Business card",
+      description: "Habtamu Tesfaw business card",
+      image: "/assets/images/habtamub.png",
+      link: "#",
+      
+    },
     
   ];
 
