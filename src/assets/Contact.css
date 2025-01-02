@@ -36,6 +36,60 @@
   margin-bottom: 15px;
 }
 
+
+.ai-brain-graphic {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(135deg, #2c2a6e, #ff9900); /* Gradient from purple to orange */
+  border-radius: 50%; /* Circular shape */
+  position: relative;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+  animation: pulse 3s infinite; /* Animated pulse effect */
+}
+
+.ai-brain-graphic::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.2); /* Light overlay */
+  border-radius: 50%;
+  animation: rotate 5s linear infinite; /* Rotating overlay effect */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Scale up for a pulsating effect */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg); /* Rotation animation */
+  }
+}
+
+
+
+
+
+.ai-description {
+  font-size: 16px;
+  color: #555;
+}
+
 /* Left Section */
 .contact-left {
   flex: 1;
