@@ -13,15 +13,24 @@ function Projects() {
       title: "Union",
       description: "personalized support to meet your academic, professionals.",
       image: "/assets/images/unionnewweeb.png",
-      link: "#",
+      link: "https://www.uniongeneralservice.com/",
     },
     {
-      title: "Digital Storefront",
-      description: "A sleek e-commerce platform for selling digital products worldwide.",
-      image: "/assets/images/e-commerce.jpg",
+      title: "Medlink",
+      description: "Bridging Global Medical Innovation to Ethiopia.",
+      image: "/assets/images/medlinkweb.png",
       link: "#",
       
     },
+
+        {
+      title: "utopia home",
+      description: "Diverse Homes, One Seamless System.",
+      image: "/assets/images/utopiahomeweb.png",
+      link: "#",
+      
+    },
+    
   ];
 
   return (
