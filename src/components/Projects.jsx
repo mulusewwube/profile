@@ -51,9 +51,20 @@ function Projects() {
           <div
             className="project-card"
             key={index}
-            style={{
+{/*             style={{
               backgroundImage: `url(${project.image})`,
-            }}
+            }} */}
+
+  style={{
+  backgroundImage: `url(${project.image})`,
+  backgroundSize: 'cover',   // or 'contain' based on your need
+  backgroundPosition: 'center', 
+  height: '90%',           // Customize the height
+  width: '90%',             // Customize the width (or set a specific value like '500px')
+  borderRadius: '10px',      // Optional: Add rounded corners
+  overflow: 'hidden'         // Ensures the image doesn't overflow
+}}
+
           >
             <div className="project-overlay">
               <div className="project-info">
