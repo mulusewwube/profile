@@ -12,7 +12,7 @@ function Projects() {
     {
       title: "Union",
       description: "personalized support to meet your academic, professionals.",
-      image: "/assets/images/union.png",
+      image: "/assets/images/unionnewweeb.png",
       link: "#",
     },
     {
