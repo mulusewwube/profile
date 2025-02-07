@@ -5,18 +5,9 @@ import myImage from "../assets/images/my-photo.jpg";
 
 function AboutMe() {
   const timelineItems = [
-    {
-      year: "2024",
-      description: "I hold a Bachelor's degree in Computer Science.",
-    },
-    {
-      year: "2023",
-      description: "Completed a certification in web development from Udemy",
-    },
-    {
-      year: "2022",
-      description: "Developed graphic design skills using tools like Adobe Illustrator and Figma.",
-    },
+    { year: "2024", description: "Earned a Bachelor’s degree in Computer Science" },
+    { year: "2023", description: "Completed a certification in web development from Udemy" },
+    { year: "2022", description: "Developed graphic design skills using tools like Adobe Illustrator and Figma" },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -25,90 +16,77 @@ function AboutMe() {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % timelineItems.length);
     }, 3000);
-
     return () => clearInterval(interval);
   }, [timelineItems.length]);
 
   return (
     <section className="about-me" id="about">
-      {/* Header Section */}
-      <div className="about-me-header" >
-      <h2 className="aboutme-title">About Me</h2>
-      <hr className="horizontal-line" />
+      {/* Hero Section */}
+      <div className="hero-section">
+        <div className="hero-content">
+          <h1 className="hero-title">
+            Hi, I'm <span>Mulusew Wube</span>
+          </h1>
+          <p className="hero-subtitle">Web Developer | Graphic Designer | UI/UX Enthusiast</p>
+          <button className="cta-button">Resume</button>
+        </div>
+        <img src={myImage} alt="Profile" className="hero-image" />
       </div>
 
-      <div className="about-me-container">                                                                                             
-        {/* Name Section */}
-        <div className="name-section" style={{ position: "relative", textAlign: "center", padding: "2rem", borderRadius: "15px",  background: " #", boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)", color: "#fff",  height:"250px" ,width:"400px" }}>
-  <h3 className="name-title" style={{ fontSize: "2.5rem", fontWeight: "bold", marginBottom: "1rem", textShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", transform: "translateY(-20px)", color: "#2c2a6e", animation: "bounce 2s infinite" }}>
-    Mulusew Wube
-  </h3>
-  <ul className="description-list" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", justifyContent: "center", gap: "1.5rem" }}>
-    <li style={{ display: "inline-block", padding: "0.5rem 1rem", border: "2px solid rgba(255,255,255,0.6)", borderRadius: "50px", background: "rgba(255, 255, 255, 0.1)", boxShadow: "0 2px 10px rgba(0,0,0,0.2)", transition: "transform 0.3s" }}>Web Developer</li>
-    <li style={{ display: "inline-block", padding: "0.5rem 1rem", border: "2px solid rgba(255,255,255,0.6)", borderRadius: "50px", background: "rgba(255, 255, 255, 0.1)", boxShadow: "0 2px 10px rgba(0,0,0,0.2)", transition: "transform 0.3s" }}>Graphics Designer</li>
-    <li style={{ display: "inline-block", padding: "0.5rem 1rem", border: "2px solid rgba(255,255,255,0.6)", borderRadius: "50px", background: "rgba(255, 255, 255, 0.1)", boxShadow: "0 2px 10px rgba(0,0,0,0.2)", transition: "transform 0.3s" }}>UI/UX Enthusiast</li>
-  </ul>
-</div>
+      {/* About Section */}
+      <div className="about-section">
+        <h2 className="section-title">About Me</h2>
+        <p className="about-text">
+          I'm a passionate developer and designer with a keen eye for aesthetics and functionality. I create impactful
+          web applications and design solutions that connect with users and bring ideas to life.
+        </p>
+      </div>
 
-
-        {/* Image Section */}
-        <div className="about-me-image">
-          <img src={myImage} alt="Profile" className="profile-image" />
+      <div className="content-container">
+        {/* Timeline Section */}
+        <div className="timeline-section">
+          <h2 className="section-title">Education & Growth</h2>
+          <div className="timeline">
+            {timelineItems.map((item, index) => (
+              <div
+                className={`timeline-item ${index === currentIndex ? "active" : ""}`}
+                key={index}
+                style={{
+                  animationDelay: `${index * 0.3}s`,
+                }}
+              >
+                <span className="timeline-year">{item.year}</span>
+                <p className="timeline-description">{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Education Timeline Section */}
-        <div className="education-timeline"  style={{ position: "relative", textAlign: "center", padding: "2rem", borderRadius: "15px", background: "", boxShadow: "0 8px 20px rgba(0, 0, 0, 0.2)", color: "white" ,  height:"250px" ,width:"400px"}}   >
-          <h4 className="section-subtitle" style={{ fontSize: "1.5rem", fontWeight: "bold", marginBottom: "1rem", textShadow: "0 4px 10px rgba(0, 0, 0, 0.2)", transform: "translateY(-20px)", animation: "bounce 2s infinite" , color: " #2c2a6e" }} >
-            <FaGraduationCap className="icon" /> Education & Growth
-          </h4>
-          <div className="about-me-timeline" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", justifyContent: "center", gap: "1.5rem" }} >
-          <div className="timeline-item" key={timelineItems[currentIndex].year} style={{ animation: "slideInRight 1s ease-out" }}>
-   
-
-              <span className="year">
-    <span className="year-text">{timelineItems[currentIndex].year}</span>
-    <span className="year-vertical-line"></span>
-</span>
-
-
-              <p className="timeline-description">{timelineItems[currentIndex].description}</p>
+        {/* Skills Section */}
+        <div className="skills-section">
+          <h2 className="section-title">Skills</h2>
+          <div className="skills-grid">
+            <div className="skill">
+              <FaCode className="icon" /> <p>Web Development</p>
+            </div>
+            <div className="skill">
+              <FaPalette className="icon" /> <p>Graphic Design</p>
+            </div>
+            <div className="skill">
+              <FaGraduationCap className="icon" /> <p>UI/UX Design</p>
+            </div>
+            <div className="skill">
+              <FaBriefcase className="icon" /> <p>Project Management</p>
+            </div>
+            <div className="skill">
+              <FaLaptopCode className="icon" /> <p>Problem Solving</p>
+            </div>
+            <div className="skill">
+              <FaStar className="icon" /> <p>Creativity</p>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="skills-section">
-        {/* <h4 className="skills-title"></h4> */}
-        <div className="skills-grid">
-          <div className="skill">
-            <FaCode className="icon" />
-            <p>Web Development</p>
-          </div>
-          <div className="skill">
-            <FaPalette className="icon" />
-            <p>Graphic Design</p>
-          </div>
-          <div className="skill">
-            <FaGraduationCap className="icon" />
-            <p>UI/UX Design</p>
-          </div>
-          <div className="skill">
-            <FaBriefcase className="icon" />
-            <p>Project Management</p>
-          </div>
-          <div className="skill">
-            <FaLaptopCode className="icon" />
-            <p>Problem Solving</p>
-          </div>
-          <div className="skill">
-            <FaStar className="icon" />
-            <p>Creativity</p>
-          </div>
-        </div>
-      </div>
-
-   
- 
     </section>
   );
 }
